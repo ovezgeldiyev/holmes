@@ -1,0 +1,228 @@
+h1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 120%;
+  letter-spacing: -1.584px;
+}
+
+h2 {
+  font-family: $publicSans;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -1.188px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.33px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: -0.6px;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+p {
+  &.ex {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+  }
+  &.sm {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.main {
+  overflow: hidden;
+  padding-top: 92px;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: $mainFont;
+  &.primary {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.21px;
+    color: $white;
+    padding: 9px 16px;
+    background-color: $primary;
+    border-radius: 12px;
+  }
+  &.secondary {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.21px;
+    color: $black2;
+    background-color: #f0f2f5;
+    border-radius: 12px;
+    padding: 9px 16px;
+  }
+}
+.search {
+  width: 100%;
+  max-width: 678px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 18px 8px 16px;
+  background-color: $white;
+  border-radius: 12px;
+  position: relative;
+  svg {
+    color: $gray;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .button {
+    position: relative;
+    z-index: 1;
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 120px 20px 52px;
+    background-color: transparent;
+    font-family: $mainFont;
+    color: $main;
+    text-align: start;
+    -webkit-appearance: none;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}
+.lang {
+  position: relative;
+  &:hover {
+    .lang__menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $black2;
+    cursor: pointer;
+    background-color: #f0f2f5;
+    border-radius: 12px;
+    svg {
+      width: 50%;
+      height: 50%;
+    }
+    &:hover {
+      color: $primary;
+      opacity: 1;
+    }
+  }
+  &__menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f0f2f5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    a {
+      color: $black2;
+      font-size: 16px;
+      line-height: 100%;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      &:hover {
+        text-decoration: underline;
+        color: $primary;
+        opacity: 1;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+.profile {
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      @include fullImage;
+    }
+  }
+}
+.rate {
+  display: flex;
+  align-items: center;
+  &__range {
+    position: relative;
+    width: 108px;
+    height: 20px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 108px;
+      height: 20px;
+      object-fit: contain;
+    }
+    &-progress {
+      position: absolute;
+      top: 50%;
+      height: 100%;
+      left: 0;
+      width: 0;
+      overflow: hidden;
+      @include transformY;
+      img {
+        width: 108px;
+        height: 20px;
+        position: static;
+      }
+    }
+  }
+}

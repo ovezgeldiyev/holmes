@@ -1,0 +1,300 @@
+.footer {
+  padding: 80px 0;
+  font-family: $roboto;
+  &__inner {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+    }
+    &-side {
+      width: calc(62% - 12px);
+      max-width: 760px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &-logo {
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    &-links {
+      width: calc(100% - 270px);
+      max-width: 460px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-col {
+      width: calc(33.3% - 12px);
+      max-width: 130px;
+      display: flex;
+      flex-direction: column;
+      h6 {
+        margin-bottom: 16px;
+        line-height: 150%;
+        color: $black;
+      }
+      a {
+        padding: 8px 0;
+        font-size: 14px;
+        line-height: 150%;
+        color: $black;
+        margin-bottom: 6px;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+      }
+    }
+    &-main {
+      width: calc(38% - 10px);
+      max-width: 500px;
+      color: $black;
+      h6 {
+        margin-bottom: 16px;
+      }
+      > p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &Form {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    &__input {
+      display: flex;
+      width: calc(100% - 130px);
+      max-width: 365px;
+      input {
+        width: 100%;
+        height: 100%;
+        font-family: $roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $black;
+        border: 1px solid $black;
+        padding: 12px;
+        &::placeholder {
+          color: #666666;
+        }
+      }
+    }
+    &__button {
+      width: 120px;
+      font-family: $roboto;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000000;
+      background-color: transparent;
+      border: 1px solid $black;
+      padding: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        opacity: 1;
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+  &Copy {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $black;
+    &__side {
+      display: flex;
+      align-items: center;
+      p,
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        margin-right: 24px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+      }
+    }
+    &__links {
+      display: flex;
+      align-items: center;
+    }
+    &__social {
+      display: flex;
+      align-items: center;
+      a {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin footer-xlg-xxlg {
+  .footer {
+    padding: 60px 0;
+    &__inner {
+      &-row {
+        margin-bottom: 70px;
+        flex-direction: column;
+      }
+      &-side {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      &-main {
+        width: 100%;
+        h6 {
+          margin-bottom: 8px;
+        }
+        & > p {
+          margin-bottom: 16px;
+        }
+      }
+      &-logo {
+        width: 210px;
+      }
+      &-links {
+        width: calc(100% - 230px);
+      }
+    }
+  }
+}
+// 930px
+@mixin footer-md-lg {
+  .footer {
+    padding: 40px 0;
+    &__inner {
+      &-row {
+        margin-bottom: 40px;
+      }
+      &-col {
+        h6 {
+          margin-bottom: 10px;
+        }
+        a {
+          padding: 4px 0;
+        }
+      }
+    }
+    &Copy {
+      flex-direction: column;
+      &__side {
+        flex-direction: column;
+        p {
+          margin: 0;
+        }
+      }
+      &__links {
+        order: -1;
+        margin-bottom: 16px;
+      }
+      &__social {
+        order: -1;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+// 650px
+@mixin footer-sm-md-extra {
+  .footer {
+    padding: 25px 0;
+    &__inner {
+      &-logo {
+        width: 160px;
+        margin-bottom: 20px;
+      }
+      &-side {
+        flex-direction: column;
+      }
+      &-links {
+        width: 100%;
+      }
+      &-row {
+        margin-bottom: 20px;
+      }
+      &-main {
+        h6 {
+          margin-bottom: 4px;
+        }
+        & > p {
+          margin-bottom: 10px;
+        }
+      }
+      &-col {
+        a {
+          font-size: 13px;
+          line-height: 140%;
+        }
+      }
+    }
+    &Form {
+      &__row {
+        flex-direction: column;
+        margin-bottom: 12px;
+      }
+      &__input {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 12px;
+      }
+      &__button {
+        width: 100%;
+        line-height: 20px;
+      }
+    }
+    &Copy {
+      padding-top: 20px;
+      &__side {
+        a {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #e5e8eb;
+  background-color: $white;
+  .auto__container {
+    max-width: 1480px;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: 0.4s;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      img {
+        width: 100%;
+      }
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+    }
+    &-side {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+// 1180px
+@mixin header-xlg-xxlg {
+  .header {
+    &__inner {
+      &-logo {
+        width: 210px;
+      }
+    }
+  }
+}
+// 1024px
+@mixin header-lg-xlg {
+  .header {
+  }
+}
+// 540px
+@mixin header-xsm-sm {
+  .header {
+    &__inner {
+      padding: 8px 0;
+      &-logo {
+        width: 160px;
+      }
+    }
+  }
+}
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

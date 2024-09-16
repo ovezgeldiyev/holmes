@@ -1,0 +1,183 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    font-size: 55px;
+  }
+  p {
+    &.ex {
+      font-size: 24px;
+    }
+  }
+  @include hero-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .main {
+    padding-top: 80px;
+  }
+  @include header-xlg-xxlg;
+  @include nav-xlg-xxlg;
+  @include hero-xlg-xxlg;
+  @include property-xlg-xxlg;
+  @include footer-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  p {
+    &.ex {
+      font-size: 20px;
+    }
+  }
+  .lang {
+    &__btn {
+      border-radius: 8px;
+    }
+  }
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 40px;
+    letter-spacing: 0.5px;
+  }
+  h2 {
+    font-size: 30px;
+    letter-spacing: 0.5px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 22px;
+    letter-spacing: 0.3px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  @include hero-md-lg;
+  @include property-md-lg;
+  @include reviews-md-lg;
+  @include highlights-md-lg;
+  @include footer-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  p {
+    &.ex {
+      font-size: 16px;
+    }
+    &.sm {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  @include hero-sm-md;
+  @include agents-sm-md;
+  @include property-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  @include hero-sm-md-extra;
+  @include property-sm-md-extra;
+  @include footer-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .main {
+    padding-top: 74px;
+  }
+  .search {
+    padding: 5px 5px 5px 12px;
+    border-radius: 8px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+    .button {
+      font-size: 12px;
+      line-height: 16px;
+      border-radius: 8px;
+    }
+    input {
+      padding: 10px 86px 10px 36px;
+    }
+  }
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include hero-xsm-sm;
+  @include property-xsm-sm;
+  @include reviews-xsm-sm;
+  @include highlights-xsm-sm;
+  @include agents-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include hero-xxxsm-xxsm;
+}
